@@ -1,0 +1,59 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 48px;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(5, 61, 202, 0.1);
+  box-shadow: 0 1px 20px rgba(5, 61, 202, 0.06);
+  transition: box-shadow 0.3s;
+}
+.scrolled { box-shadow: 0 4px 32px rgba(5, 61, 202, 0.1); }
+.logo { height: 48px; width: auto; object-fit: contain; }
+
+.links {
+  display: flex; gap: 32px; list-style: none;
+}
+.links a {
+  color: var(--gray); text-decoration: none;
+  font-family: Arial, sans-serif; font-size: 11.5px;
+  letter-spacing: .09em; text-transform: uppercase;
+  transition: color .2s;
+}
+.links a:hover { color: var(--blue); }
+
+.cta {
+  background: var(--blue); color: white;
+  padding: 10px 24px;
+  font-family: Arial, sans-serif; font-size: 11.5px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; text-decoration: none;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  transition: background .2s;
+}
+.cta:hover { background: var(--blue2); }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; background: none; border: none; padding: 4px;
+}
+.hamburger span { width: 24px; height: 2px; background: var(--text); display: block; transition: all 0.3s; }
+.spanOpen1 { transform: rotate(45deg) translate(5px, 5px); }
+.spanOpen2 { opacity: 0; }
+.spanOpen3 { transform: rotate(-45deg) translate(5px, -5px); }
+
+@media (max-width: 900px) {
+  .nav { padding: 12px 20px; }
+  .hamburger { display: flex; }
+  .links {
+    display: none;
+    flex-direction: column; gap: 0;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: white; padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+  }
+  .links.open { display: flex; }
+  .links li { padding: 10px 0; border-bottom: 1px solid rgba(5,61,202,.06); }
+  .links a { font-size: 13px; }
+  .cta { font-size: 11px; padding: 8px 16px; }
+}

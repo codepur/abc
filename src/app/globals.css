@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-baskerville: "Libre Baskerville", Georgia, serif;
+    --font-sans: Arial, sans-serif;
+
+    /* Brand colors as CSS vars for use in arbitrary Tailwind values */
+    --blue: #053DCA;
+    --blue2: #1a50d6;
+    --gold: #E88F04;
+    --dark: #0d1240;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-[#1a1c2e] overflow-x-hidden font-serif;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer utilities {
+  /* Skewed clip-path buttons */
+  .clip-skew {
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  }
+  .clip-skew-sm {
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  }
+  .clip-skew-lg {
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  }
+
+  /* Ticker animation */
+  .animate-ticker {
+    animation: ticker 35s linear infinite;
+  }
+
+  /* Fade up animation */
+  .animate-fade-up {
+    animation: fadeUp 0.7s ease forwards;
+  }
+
+  /* Pulse dot */
+  .animate-pulse-dot {
+    animation: pulseDot 1.5s infinite;
+  }
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.3); }
+}

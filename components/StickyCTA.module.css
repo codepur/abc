@@ -1,0 +1,10 @@
+.wrap { position: fixed; bottom: 24px; right: 24px; z-index: 900; }
+.wrap a {
+  background: var(--blue); color: white; padding: 13px 24px;
+  font-family: Arial, sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; text-decoration: none;
+  display: block;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  box-shadow: 0 8px 28px rgba(5, 61, 202, .22); transition: background .2s;
+}
+.wrap a:hover { background: var(--blue2); }

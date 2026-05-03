@@ -1,0 +1,8 @@
+.section { background: var(--blue-ultra); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+.box { background: white; border: 1px solid var(--border); padding: 28px 24px; transition: all .3s; }
+.box:hover { border-color: var(--gold); box-shadow: 0 8px 28px rgba(5,61,202,.07); }
+.num { font-size: 42px; font-weight: 900; color: rgba(5,61,202,.1); line-height: 1; margin-bottom: 14px; font-family: Arial, sans-serif; }
+.title { font-family: Arial, sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--blue); margin-bottom: 8px; }
+.desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; font-style: italic; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
