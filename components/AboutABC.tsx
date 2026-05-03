@@ -29,8 +29,8 @@ export default function AboutABC() {
             </p>
             <div className={styles.visionBox}>
               <p>
-                Rooted in the Agrawal ethos — "Ek Eent aur Ek Rupiya" (collective contribution)
-                and "Kar Bhala, So Ho Bhala" (ethical, value-led conduct) — ABC builds a culture
+                Rooted in the Agrawal ethos — &ldquo;Ek Eent aur Ek Rupiya&rdquo; (collective contribution)
+                and &ldquo;Kar Bhala, So Ho Bhala&rdquo; (ethical, value-led conduct) — ABC builds a culture
                 where shared effort creates shared growth.
               </p>
             </div>

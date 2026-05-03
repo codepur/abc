@@ -6,23 +6,24 @@ import styles from './Hero.module.css'
 
 interface TimeLeft { days: string; hours: string; mins: string; secs: string }
 
-function useCountdown(target: Date): TimeLeft {
-  const calc = (): TimeLeft => {
-    const diff = target.getTime() - Date.now()
-    if (diff <= 0) return { days: '00', hours: '00', mins: '00', secs: '00' }
-    const pad = (n: number) => String(n).padStart(2, '0')
-    return {
-      days:  pad(Math.floor(diff / 86400000)),
-      hours: pad(Math.floor((diff % 86400000) / 3600000)),
-      mins:  pad(Math.floor((diff % 3600000) / 60000)),
-      secs:  pad(Math.floor((diff % 60000) / 1000)),
-    }
+function calcTimeLeft(target: Date): TimeLeft {
+  const diff = target.getTime() - Date.now()
+  if (diff <= 0) return { days: '00', hours: '00', mins: '00', secs: '00' }
+  const pad = (n: number) => String(n).padStart(2, '0')
+  return {
+    days:  pad(Math.floor(diff / 86400000)),
+    hours: pad(Math.floor((diff % 86400000) / 3600000)),
+    mins:  pad(Math.floor((diff % 3600000) / 60000)),
+    secs:  pad(Math.floor((diff % 60000) / 1000)),
   }
-  const [time, setTime] = useState<TimeLeft>(calc)
+}
+
+function useCountdown(target: Date): TimeLeft {
+  const [time, setTime] = useState<TimeLeft>(() => calcTimeLeft(target))
   useEffect(() => {
-    const id = setInterval(() => setTime(calc()), 1000)
+    const id = setInterval(() => setTime(calcTimeLeft(target)), 1000)
     return () => clearInterval(id)
-  }, [])
+  }, [target])
   return time
 }
 
