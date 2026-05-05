@@ -9,11 +9,9 @@ import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
-  { href: "#about",    label: "About"    },
-  { href: "#theme",    label: "Theme"    },
+  { href: "#about", label: "About" },
+  { href: "#theme", label: "Theme" },
   { href: "#speakers", label: "Speakers" },
-  { href: "#details",  label: "Details"  },
-  { href: "#sponsor",  label: "Sponsor"  },
   { href: "#register", label: "Register" },
 ];
 
@@ -54,7 +52,7 @@ export default function Navbar() {
       {/* Desktop links */}
       <ul className="hidden lg:flex items-center gap-8">
         {NAV_LINKS.map((link, i) => (
-          <motion.li 
+          <motion.li
             key={link.href}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -71,7 +69,7 @@ export default function Navbar() {
       </ul>
 
       {/* CTA */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.8, duration: 0.3 }}
@@ -96,7 +94,7 @@ export default function Navbar() {
       {/* Mobile drawer */}
       <AnimatePresence>
         {open && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -105,7 +103,7 @@ export default function Navbar() {
           >
             <ul className="flex flex-col p-6 gap-2">
               {NAV_LINKS.map((link, i) => (
-                <motion.li 
+                <motion.li
                   key={link.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -120,7 +118,7 @@ export default function Navbar() {
                   </Link>
                 </motion.li>
               ))}
-              <motion.li 
+              <motion.li
                 className="pt-6 pb-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

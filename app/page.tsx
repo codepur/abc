@@ -3,13 +3,11 @@ import Hero from "@/components/sections/Hero";
 import Ticker from "@/components/sections/Ticker";
 import StatsBar from "@/components/sections/StatsBar";
 import PatternDivider from "@/components/sections/PatternDivider";
-import Performance from "@/components/sections/Performance";
 import AboutABC from "@/components/sections/AboutABC";
+import AboutEvent from "@/components/sections/AboutEvent";
 import Theme from "@/components/sections/Theme";
 import Speakers from "@/components/sections/Speakers";
 import WhyAttend from "@/components/sections/WhyAttend";
-import EventDetails from "@/components/sections/EventDetails";
-import Sponsorship from "@/components/sections/Sponsorship";
 import Registration from "@/components/sections/Registration";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -25,34 +23,14 @@ export default function Home() {
         <Hero />
         <Ticker />
         <StatsBar />
-
         <PatternDivider />
-        <Performance />
-
-        {/* <PatternDivider /> */}
         <AboutABC />
-
-        {/* <PatternDivider /> */}
+        <AboutEvent />
         <Theme />
-
-        {/* <PatternDivider /> */}
         <Speakers />
-
-        {/* <PatternDivider />   */}
         <WhyAttend />
-
-        {/* <PatternDivider /> */}
-        <EventDetails />
-
-        {/* <PatternDivider /> */}
-        <Sponsorship />
-
-        {/* <PatternDivider /> */}
         <Registration />
-
-        {/* <PatternDivider /> */}
         <FAQ />
-
         <PatternDivider />
         <FinalCTA />
       </main>

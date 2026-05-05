@@ -1,6 +1,0 @@
-/* FinalCTA.module.css */
-.section { background: var(--blue); padding: 96px 48px; text-align: center; position: relative; overflow: hidden; }
-.section::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(-45deg, transparent, transparent 30px, rgba(255,255,255,.03) 30px, rgba(255,255,255,.03) 31px); }
-.inner { position: relative; }
-.h2 { font-size: clamp(26px, 3.5vw, 48px); font-weight: 700; line-height: 1.14; margin-bottom: 14px; letter-spacing: -.02em; color: white; }
-.p { font-size: 17px; color: rgba(255,255,255,.75); margin-bottom: 36px; font-style: italic; max-width: 520px; margin-left: auto; margin-right: auto; }

@@ -45,11 +45,11 @@ export default function Footer() {
             <Image
               src="/images/logo.png"
               alt="ABC Summit 2026"
-              width={200}
-              height={54}
-              className="h-[54px] w-auto object-contain mb-5"
+              width={250}
+              height={60}
+              className=" object-contain mb-5"
             />
-            <p className="text-[13px] text-gray-500 leading-[1.75] italic">
+            <p className="text-[13px] text-gray-500 leading-[1.75] ">
               The Agrawal Business Community (ABC) Indore is a premier networking and growth
               ecosystem for Agrawal entrepreneurs and business leaders across India.
             </p>
@@ -69,7 +69,7 @@ export default function Footer() {
           {/* Nav groups */}
           {NAV_GROUPS.map((group) => (
             <div key={group.title}>
-              <h4 className="font-sans text-[10px] tracking-[0.2em] uppercase text-[#053DCA] mb-4">
+              <h4 className="font-sans text-[14px] tracking-[0.2em] uppercase font-semibold  mb-4">
                 {group.title}
               </h4>
               <ul className="space-y-2">
@@ -77,7 +77,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-[13px] text-gray-500 italic hover:text-[#053DCA] transition-colors"
+                      className="text-[13px] text-gray-500  font-medium transition-colors"
                     >
                       {link.label}
                     </Link>

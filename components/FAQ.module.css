@@ -1,9 +1,0 @@
-.section { background: white; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 48px; }
-.item { background: var(--blue-ultra); border: 1px solid var(--border); padding: 22px; cursor: pointer; transition: border-color .2s; }
-.item:hover, .openItem { border-color: var(--gold); }
-.q { font-family: Arial, sans-serif; font-size: 13px; font-weight: 700; color: var(--dark); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-.icon { color: var(--gold); font-size: 18px; font-weight: 300; flex-shrink: 0; transition: transform .3s; }
-.iconOpen { transform: rotate(45deg); }
-.a { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-top: 12px; font-style: italic; }
-@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }

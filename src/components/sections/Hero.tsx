@@ -23,10 +23,10 @@ function useCountdown(target: Date): TimeLeft {
       const diff = target.getTime() - Date.now();
       if (diff <= 0) return;
       setTimeLeft({
-        days:  String(Math.floor(diff / 86400000)).padStart(2, "0"),
+        days: String(Math.floor(diff / 86400000)).padStart(2, "0"),
         hours: String(Math.floor((diff % 86400000) / 3600000)).padStart(2, "0"),
-        mins:  String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0"),
-        secs:  String(Math.floor((diff % 60000) / 1000)).padStart(2, "0"),
+        mins: String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0"),
+        secs: String(Math.floor((diff % 60000) / 1000)).padStart(2, "0"),
       });
     };
     tick();
@@ -43,13 +43,19 @@ export default function Hero() {
   const { days, hours, mins, secs } = useCountdown(SUMMIT_DATE);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-28 pb-20 px-6 md:px-12 overflow-hidden bg-gradient-to-br from-white via-[#f4f7fe] to-[#eaf0fd]">
-      {/* Geometric background shape */}
-      <div className="absolute right-0 top-0 bottom-0 w-[45%] bg-gradient-to-br from-[rgba(5,61,202,0.04)] to-[rgba(5,61,202,0.09)] [clip-path:polygon(18%_0%,100%_0%,100%_100%,0%_100%)] hidden lg:block" />
-      {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#053DCA] via-[#E88F04] to-[#053DCA] opacity-20" />
+    <section className="relative min-h-screen flex items-center pt-28 pb-20 px-6 md:px-12 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/home-bg.jpg"
+          alt="Background"
+          fill
+          className="opacity-[80%]"
+          priority
+        />
+      </div>
 
-      <div className="relative max-w-[1200px] mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-16 items-center">
+      <div className="relative z-10 max-w-[1200px] mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-16 items-center">
         {/* Left */}
         <div>
           <Badge variant="blue" className="mb-6">
@@ -71,9 +77,9 @@ export default function Hero() {
           {/* Meta pills */}
           <div className="flex flex-wrap gap-8 mb-10">
             {[
-              { label: "Date",     value: "20 June 2026"          },
-              { label: "Venue",    value: "Sheraton Grand, Indore" },
-              { label: "Audience", value: "350+ Entrepreneurs"     },
+              { label: "Date", value: "20 June 2026" },
+              { label: "Venue", value: "Sheraton Grand, Indore" },
+              { label: "Audience", value: "350+ Entrepreneurs" },
             ].map(({ label, value }) => (
               <div key={label} className="flex flex-col gap-0.5">
                 <span className="font-sans text-[10px] tracking-[0.15em] uppercase text-[#E88F04]">
@@ -102,7 +108,7 @@ export default function Hero() {
         {/* Right: hero card */}
         <div className="hidden lg:block bg-white border border-[rgba(5,61,202,0.15)] shadow-[0_24px_64px_rgba(5,61,202,0.1)] p-10 text-center">
           <Image
-            src="/logo.png"
+            src="/images/logo.png"
             alt="ABC Summit 2026"
             width={320}
             height={90}
@@ -118,10 +124,10 @@ export default function Hero() {
           {/* Countdown */}
           <div className="flex gap-2.5 justify-center">
             {[
-              { val: days,  label: "Days"  },
+              { val: days, label: "Days" },
               { val: hours, label: "Hours" },
-              { val: mins,  label: "Mins"  },
-              { val: secs,  label: "Secs"  },
+              { val: mins, label: "Mins" },
+              { val: secs, label: "Secs" },
             ].map(({ val, label }) => (
               <div
                 key={label}
