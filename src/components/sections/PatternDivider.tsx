@@ -4,7 +4,7 @@ export default function PatternDivider() {
   return (
     <div className="w-full overflow-hidden leading-[0]">
       <Image
-        src="/pattern-divider.png"
+        src="/images/pattern-divider.png"
         alt=""
         width={1440}
         height={60}

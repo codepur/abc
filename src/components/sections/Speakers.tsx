@@ -1,9 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import SectionHeader from "./SectionHeader";
+import Image from "next/image";
 
 const SPEAKERS = [
   {
-    initials: "RKP",
+    image: "/images/images-1.jpg",
     badge: "Authority on Chanakya, Strategy & Leadership",
     name: "Dr. Radha Krishnan Pillai",
     title:
@@ -19,7 +20,7 @@ const SPEAKERS = [
     ],
   },
   {
-    initials: "ASK",
+    image: "/images/images-2.jpg",
     badge: "Filmmaker, Storyteller & Narrative Strategist",
     name: "Atul Satya Koushik",
     title:
@@ -43,58 +44,58 @@ export default function Speakers() {
           description="Two of India's most compelling business minds — one a master of ancient strategy, one of modern narrative."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mt-14">
-          {SPEAKERS.map((sp) => (
-            <div
-              key={sp.initials}
-              className="bg-[#f7f9fe] border border-[rgba(5,61,202,0.12)] overflow-hidden grid grid-cols-[180px_1fr] hover:border-[#E88F04] hover:shadow-[0_12px_40px_rgba(5,61,202,0.1)] transition-all duration-300"
-            >
-              {/* Image placeholder */}
-              <div className="bg-gradient-to-br from-[#f0f4fd] to-[#e8effe] flex items-center justify-center relative overflow-hidden min-h-[200px]">
-                <span className="absolute w-40 h-40 rounded-full bg-[rgba(5,61,202,0.08)]" />
-                <span className="relative z-10 font-sans text-5xl font-black text-[rgba(5,61,202,0.22)]">
-                  {sp.initials}
-                </span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
+          
+          {SPEAKERS.map((speaker, idx) => (
+            <div key={idx} className="bg-white rounded-3xl overflow-hidden shadow-[0_4px_24px_rgba(5,61,202,0.04)] border border-[rgba(5,61,202,0.06)] flex flex-col hover:shadow-[0_12px_40px_rgba(5,61,202,0.08)] transition-all duration-300 group">
+              <div className="relative h-[340px] w-full bg-slate-100 overflow-hidden">
+                <Image 
+                  src={speaker.image} 
+                  alt={speaker.name} 
+                  fill 
+                  className="w-full h-full object-contain h-full
+                   group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute bottom-4 left-6">
+                  <Badge variant="outline" className="bg-white/90 backdrop-blur-sm border-transparent text-[#E88F04] font-bold tracking-wider text-[10px] uppercase">
+                    {speaker.badge}
+                  </Badge>
+                </div>
               </div>
-
-              {/* Info */}
-              <div className="p-7 flex flex-col justify-center">
-                <Badge variant="speaker" className="self-start mb-3">
-                  {sp.badge}
-                </Badge>
-                <h3 className="font-sans text-[18px] font-bold text-[#0d1240] leading-tight mb-1">
-                  {sp.name}
-                </h3>
-                <p className="text-[13px] text-[#5a5a6e] italic leading-snug mb-4">{sp.title}</p>
-
-                <ul className="space-y-1.5 mb-4">
-                  {sp.bullets.map((b) => (
-                    <li key={b} className="flex gap-2 text-[12.5px] text-[#5a5a6e] italic">
-                      <span className="text-[#053DCA] text-[10px] mt-0.5 shrink-0">○</span>
-                      {b}
+              
+              <div className="p-8 flex-1 flex flex-col">
+                <h3 className="text-2xl font-bold text-[#0d1240] mb-3">{speaker.name}</h3>
+                <p className="text-[13px] text-gray-500 mb-6 font-medium leading-relaxed pb-6 border-b border-gray-100">
+                  {speaker.title}
+                </p>
+                
+                <ul className="space-y-3.5 mb-8 flex-1">
+                  {speaker.bullets.map((bullet, i) => (
+                    <li key={i} className="flex items-start gap-3 text-[13.5px] text-[#444343] leading-snug">
+                      <span className="text-[#053DCA] mt-0.5 text-xs">✦</span>
+                      {bullet}
                     </li>
                   ))}
                 </ul>
-
-                <div className="border-t border-[rgba(5,61,202,0.08)] pt-3">
-                  <p className="font-sans text-[10px] tracking-[0.12em] uppercase text-[#666] mb-2">
-                    Alignment with Summit 2026
-                  </p>
-                  <div className="flex gap-2 flex-wrap">
-                    {sp.tags.map((t) => (
-                      <Badge key={t.label} variant={t.variant}>
-                        {t.label}
-                      </Badge>
-                    ))}
-                  </div>
+                
+                <div className="flex gap-2 mt-auto">
+                  {speaker.tags.map((tag, i) => (
+                    <Badge key={i} variant={tag.variant} className="capitalize text-[10px] tracking-wider px-3">
+                      {tag.label}
+                    </Badge>
+                  ))}
                 </div>
               </div>
             </div>
           ))}
 
           {/* More row */}
-          <div className="md:col-span-2 bg-[#f0f4fd] border border-dashed border-[rgba(5,61,202,0.25)] p-6 text-center font-sans text-[12px] tracking-[0.1em] uppercase text-[#E88F04]">
-            ✦ &nbsp; Panel Discussion with Top Agrawal Entrepreneurs from Across the City &nbsp;·&nbsp; More announcements coming soon
+          <div className="md:col-span-2 mt-4 bg-gradient-to-r from-[#f0f4fd] to-white border border-dashed border-[rgba(5,61,202,0.25)] rounded-2xl p-6 text-center font-sans text-[12px] tracking-[0.1em] uppercase text-[#E88F04] shadow-sm">
+            <span className="inline-block animate-pulse mr-2">✦</span> 
+            Panel Discussion with Top Agrawal Entrepreneurs from Across the City 
+            <span className="mx-4 opacity-50">·</span> 
+            More announcements coming soon
           </div>
         </div>
       </div>

@@ -1,20 +1,20 @@
-import Navbar        from "@/components/sections/Navbar";
-import Hero          from "@/components/sections/Hero";
-import Ticker        from "@/components/sections/Ticker";
-import StatsBar      from "@/components/sections/StatsBar";
+import Navbar from "@/components/sections/Navbar";
+import Hero from "@/components/sections/Hero";
+import Ticker from "@/components/sections/Ticker";
+import StatsBar from "@/components/sections/StatsBar";
 import PatternDivider from "@/components/sections/PatternDivider";
-import Performance   from "@/components/sections/Performance";
-import AboutABC      from "@/components/sections/AboutABC";
-import Theme         from "@/components/sections/Theme";
-import Speakers      from "@/components/sections/Speakers";
-import WhyAttend     from "@/components/sections/WhyAttend";
-import EventDetails  from "@/components/sections/EventDetails";
-import Sponsorship   from "@/components/sections/Sponsorship";
-import Registration  from "@/components/sections/Registration";
-import FAQ           from "@/components/sections/FAQ";
-import FinalCTA      from "@/components/sections/FinalCTA";
-import Footer        from "@/components/sections/Footer";
-import StickyApply   from "@/components/sections/StickyApply";
+import Performance from "@/components/sections/Performance";
+import AboutABC from "@/components/sections/AboutABC";
+import Theme from "@/components/sections/Theme";
+import Speakers from "@/components/sections/Speakers";
+import WhyAttend from "@/components/sections/WhyAttend";
+import EventDetails from "@/components/sections/EventDetails";
+import Sponsorship from "@/components/sections/Sponsorship";
+import Registration from "@/components/sections/Registration";
+import FAQ from "@/components/sections/FAQ";
+import FinalCTA from "@/components/sections/FinalCTA";
+import Footer from "@/components/sections/Footer";
+import StickyApply from "@/components/sections/StickyApply";
 
 export default function Home() {
   return (
@@ -29,28 +29,28 @@ export default function Home() {
         <PatternDivider />
         <Performance />
 
-        <PatternDivider />
+        {/* <PatternDivider /> */}
         <AboutABC />
 
-        <PatternDivider />
+        {/* <PatternDivider /> */}
         <Theme />
 
-        <PatternDivider />
+        {/* <PatternDivider /> */}
         <Speakers />
 
-        <PatternDivider />
+        {/* <PatternDivider />   */}
         <WhyAttend />
 
-        <PatternDivider />
+        {/* <PatternDivider /> */}
         <EventDetails />
 
-        <PatternDivider />
+        {/* <PatternDivider /> */}
         <Sponsorship />
 
-        <PatternDivider />
+        {/* <PatternDivider /> */}
         <Registration />
 
-        <PatternDivider />
+        {/* <PatternDivider /> */}
         <FAQ />
 
         <PatternDivider />
