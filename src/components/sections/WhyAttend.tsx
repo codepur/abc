@@ -53,14 +53,14 @@ const REASONS = [
 
 export default function WhyAttend() {
   return (
-    <section className="bg-white py-24 px-8 md:px-16 lg:px-32 xl:px-48 2xl:px-64">
+    <section className="bg-white py-24 px-6 md:px-16 lg:px-24">
       <div className="w-full max-w-[1200px] mx-auto">
         <SectionHeader
           eyebrow="What You Will Gain"
           title={<>Six Reasons You Cannot<br /><em className=" text-[#053DCA]">Afford to Miss This</em></>}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 p-2">
           {REASONS.map((r) => (
             <div
               key={r.num}
@@ -69,7 +69,7 @@ export default function WhyAttend() {
             >
               {/* Background number watermark */}
               <p
-                className="absolute -top-2 -right-1 text-[90px] font-black leading-none select-none pointer-events-none transition-transform duration-300 group-hover:scale-110"
+                className="absolute top-2 right-2 text-[60px] font-black leading-none select-none pointer-events-none transition-transform duration-300 group-hover:scale-110"
                 style={{ color: r.numColor }}
               >
                 {r.num}

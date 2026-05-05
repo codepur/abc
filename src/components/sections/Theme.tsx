@@ -56,7 +56,7 @@ const PILLARS = [
 
 export default function Theme() {
   return (
-    <section className="bg-white py-24 px-6 md:px-12" id="theme">
+    <section className="bg-white py-24 px-6 md:px-16 lg:px-24" id="theme">
       <div className="w-full">
         <SectionHeader
           eyebrow="Summit Theme 2026"

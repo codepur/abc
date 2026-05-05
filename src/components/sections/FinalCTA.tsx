@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function FinalCTA() {
   return (
-    <section className="bg-[#053DCA] py-24 px-6 md:px-12 text-center relative overflow-hidden">
+    <section className="bg-[#053DCA] py-24 px-6 md:px-16 lg:px-24 text-center relative overflow-hidden">
       {/* Diagonal stripe overlay */}
       <div
         className="absolute inset-0 pointer-events-none"

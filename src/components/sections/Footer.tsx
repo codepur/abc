@@ -37,7 +37,7 @@ const SOCIALS = ["in", "f", "IG", "YT"];
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-[rgba(5,61,202,0.1)] pt-16 pb-7 px-6 md:px-12">
+    <footer className="bg-white border-t border-[rgba(5,61,202,0.1)] pt-16 pb-7 px-6 md:px-16 lg:px-24">
       <div className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-10">
           {/* Brand */}

@@ -7,6 +7,7 @@ import AboutABC from "@/components/sections/AboutABC";
 import AboutEvent from "@/components/sections/AboutEvent";
 import Theme from "@/components/sections/Theme";
 import Speakers from "@/components/sections/Speakers";
+import Glimpse from "@/components/sections/Glimpse";
 import WhyAttend from "@/components/sections/WhyAttend";
 import Registration from "@/components/sections/Registration";
 import FAQ from "@/components/sections/FAQ";
@@ -27,6 +28,7 @@ export default function Home() {
         <AboutEvent />
         <Theme />
         <Speakers />
+        <Glimpse />
         <WhyAttend />
         <Registration />
         <FAQ />

@@ -43,7 +43,7 @@ export default function Hero() {
   const { days, hours, mins, secs } = useCountdown(SUMMIT_DATE);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-28 pb-20 px-6 md:px-12 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-28 pb-20 px-6 md:px-16 lg:px-24 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -55,7 +55,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-16 items-center">
+      <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-16 items-center">
         {/* Left */}
         <div>
           <Badge variant="blue" className="mb-6">
@@ -106,23 +106,30 @@ export default function Hero() {
         </div>
 
         {/* Right: hero card */}
-        <div className="hidden lg:block bg-white border border-[rgba(5,61,202,0.15)] shadow-[0_24px_64px_rgba(5,61,202,0.1)] p-10 text-center">
+        <div className="hidden lg:flex flex-col items-center bg-white border border-[rgba(5,61,202,0.12)] rounded-3xl shadow-[0_32px_80px_rgba(5,61,202,0.13)] p-10 text-center relative overflow-hidden">
+          {/* Decorative background circle */}
+          <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-[#EEF2FF] opacity-60 pointer-events-none" />
+          <div className="absolute -bottom-12 -left-12 w-36 h-36 rounded-full bg-[#FFF8EC] opacity-60 pointer-events-none" />
+
           <Image
             src="/images/logo.png"
             alt="ABC Summit 2026"
-            width={320}
-            height={90}
-            className="h-[88px] w-auto mx-auto mb-6 object-contain"
+            width={360}
+            height={110}
+            className="h-[110px] w-auto mx-auto mb-5 object-contain relative z-10"
           />
-          <p className="text-xl font-bold text-[#E88F04] tracking-wider mb-1">
+
+          <div className="w-16 h-px bg-[rgba(5,61,202,0.1)] mx-auto mb-5" />
+
+          <p className="text-[15px] font-black text-[#E88F04] tracking-widest mb-1 uppercase relative z-10">
             Arth · Neeti · Dharma
           </p>
-          <p className="font-sans text-[10px] tracking-[0.15em] uppercase text-[#666] mb-7">
-            Countdown to Summit
+          <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-gray-400 mb-8 relative z-10">
+            Countdown to Summit Day
           </p>
 
           {/* Countdown */}
-          <div className="flex gap-2.5 justify-center">
+          <div className="flex gap-3 justify-center relative z-10">
             {[
               { val: days, label: "Days" },
               { val: hours, label: "Hours" },
@@ -131,16 +138,23 @@ export default function Hero() {
             ].map(({ val, label }) => (
               <div
                 key={label}
-                className="flex flex-col items-center bg-[#f0f4fd] border border-[rgba(5,61,202,0.2)] px-3.5 py-3 min-w-[60px]"
+                className="flex flex-col items-center bg-gradient-to-b from-[#f0f4fd] to-[#e8effe] border border-[rgba(5,61,202,0.15)] rounded-2xl px-5 py-5 min-w-[72px] shadow-[0_4px_12px_rgba(5,61,202,0.08)]"
               >
-                <span className="font-sans text-2xl font-bold text-[#053DCA] leading-none tabular-nums">
+                <span className="font-sans text-[34px] font-black text-[#053DCA] leading-none tabular-nums tracking-tight">
                   {val}
                 </span>
-                <span className="font-sans text-[9px] tracking-[0.1em] uppercase text-[#E88F04] mt-1">
+                <span className="font-sans text-[9px] tracking-[0.15em] uppercase text-[#E88F04] mt-2 font-bold">
                   {label}
                 </span>
               </div>
             ))}
+          </div>
+
+          {/* Event details */}
+          <div className="mt-8 pt-6 border-t border-[rgba(5,61,202,0.07)] w-full relative z-10">
+            <p className="font-sans text-[11px] text-gray-400 tracking-[0.1em] uppercase mb-1">Date & Venue</p>
+            <p className="font-bold text-[#0d1240] text-[14px]">20 June 2026</p>
+            <p className="text-[13px] text-[#053DCA] font-semibold">Sheraton Grand, Indore</p>
           </div>
         </div>
       </div>

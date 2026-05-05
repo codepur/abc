@@ -9,7 +9,7 @@ const MINI_STATS = [
 
 export default function AboutABC() {
   return (
-    <section className="bg-white py-24 px-6 md:px-12 border-y border-[rgba(5,61,202,0.05)]" id="about">
+    <section className="bg-white py-24 px-6 md:px-16 lg:px-24 border-y border-[rgba(5,61,202,0.05)]" id="about">
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-10">
           {/* Left Content */}

@@ -26,7 +26,7 @@ export default function StatsBar() {
   };
 
   return (
-    <section className="relative bg-[#0d1240] py-20 px-6 md:px-12 overflow-hidden border-y border-[rgba(5,61,202,0.2)]">
+    <section className="relative bg-[#0d1240] py-20 px-6 md:px-16 lg:px-24 overflow-hidden border-y border-[rgba(5,61,202,0.2)]">
       {/* Background gradients */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#053DCA] rounded-full mix-blend-screen filter blur-[120px] opacity-30" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#E88F04] rounded-full mix-blend-screen filter blur-[120px] opacity-20" />

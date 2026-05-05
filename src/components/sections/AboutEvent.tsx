@@ -34,7 +34,7 @@ const BULLETS = [
 
 export default function AboutEvent() {
   return (
-    <section className="bg-[#f7f9fe] py-24 px-6 md:px-12 border-y border-[rgba(5,61,202,0.05)]">
+    <section className="bg-[#f7f9fe] py-24 px-6 md:px-16 lg:px-24 border-y border-[rgba(5,61,202,0.05)]">
       <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-16 lg:gap-24 items-center">
         {/* Left Side */}
         <div>

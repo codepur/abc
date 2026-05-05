@@ -21,7 +21,7 @@ export default function Speakers() {
   }, []);
 
   return (
-    <section className="w-full bg-[#f7f9fe] py-24 px-8 md:px-16 lg:px-32 xl:px-48 2xl:px-64" id="speakers">
+    <section className="w-full bg-[#f7f9fe] py-24 px-6 md:px-16 lg:px-24" id="speakers">
 
       {/* Header section above the banner */}
       <div className="w-full max-w-[1200px] mx-auto mb-12">
@@ -47,7 +47,7 @@ export default function Speakers() {
               src={SPEAKER_IMAGES[currentIndex]}
               alt={`Speaker ${currentIndex + 1}`}
               fill
-              className="object-cover object-center"
+              className="w-full"
               priority={currentIndex === 0}
             />
           </motion.div>
