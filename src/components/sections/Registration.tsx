@@ -18,7 +18,7 @@ export default function Registration() {
       className="py-24 px-6 md:px-12 bg-gradient-to-br from-[#f0f4fd] to-[#e8effe] relative overflow-hidden"
       id="register"
     >
-      <div className="max-w-[720px] mx-auto relative text-center">
+      <div className="w-full relative text-center">
         {/* Urgency badge */}
         <div className="inline-flex items-center gap-2 bg-[#fdf4e3] border border-[rgba(232,143,4,0.3)] px-4 py-1.5 mb-6 font-sans text-[11px] tracking-[0.14em] uppercase text-[#E88F04]">
           <span className="w-1.5 h-1.5 rounded-full bg-[#E88F04] animate-pulse-dot" />
@@ -27,7 +27,7 @@ export default function Registration() {
 
         <SectionHeader
           eyebrow="Apply for Your Seat"
-          title={<>Join the Most Powerful<br /><em className="not-italic text-[#053DCA]">Business Network of the Year</em></>}
+          title={<>Join the Most Powerful<br /><em className=" text-[#053DCA]">Business Network of the Year</em></>}
           description="Entry is curated. Submit your application and our team reviews your profile within 5 working days."
           center
         />
@@ -59,7 +59,7 @@ export default function Registration() {
                 <input
                   type={type}
                   placeholder={placeholder}
-                  className="bg-[#f7f9fe] border border-[rgba(5,61,202,0.18)] text-[#0d1240] px-4 py-3 text-sm italic outline-none focus:border-[#E88F04] focus:bg-white transition-colors w-full"
+                  className="bg-[#f7f9fe] border border-[rgba(5,61,202,0.18)] text-[#0d1240] px-4 py-3 text-sm  outline-none focus:border-[#E88F04] focus:bg-white transition-colors w-full"
                 />
               </div>
             ))}
@@ -68,7 +68,7 @@ export default function Registration() {
               <label className="font-sans text-[10px] tracking-[0.12em] uppercase text-[#5a5a6e]">
                 Industry *
               </label>
-              <select className="bg-[#f7f9fe] border border-[rgba(5,61,202,0.18)] text-[#666] px-4 py-3 text-sm italic outline-none focus:border-[#E88F04] focus:bg-white transition-colors w-full">
+              <select className="bg-[#f7f9fe] border border-[rgba(5,61,202,0.18)] text-[#666] px-4 py-3 text-sm  outline-none focus:border-[#E88F04] focus:bg-white transition-colors w-full">
                 <option value="">Select your industry</option>
                 {INDUSTRIES.map((ind) => (
                   <option key={ind} value={ind}>{ind}</option>
@@ -83,7 +83,7 @@ export default function Registration() {
               <input
                 type="text"
                 placeholder="Your city"
-                className="bg-[#f7f9fe] border border-[rgba(5,61,202,0.18)] text-[#0d1240] px-4 py-3 text-sm italic outline-none focus:border-[#E88F04] focus:bg-white transition-colors w-full"
+                className="bg-[#f7f9fe] border border-[rgba(5,61,202,0.18)] text-[#0d1240] px-4 py-3 text-sm  outline-none focus:border-[#E88F04] focus:bg-white transition-colors w-full"
               />
             </div>
 
@@ -94,7 +94,7 @@ export default function Registration() {
               <textarea
                 placeholder="Tell us briefly about your business goals for this summit..."
                 rows={3}
-                className="bg-[#f7f9fe] border border-[rgba(5,61,202,0.18)] text-[#0d1240] px-4 py-3 text-sm italic outline-none focus:border-[#E88F04] focus:bg-white transition-colors w-full resize-none"
+                className="bg-[#f7f9fe] border border-[rgba(5,61,202,0.18)] text-[#0d1240] px-4 py-3 text-sm  outline-none focus:border-[#E88F04] focus:bg-white transition-colors w-full resize-none"
               />
             </div>
           </div>

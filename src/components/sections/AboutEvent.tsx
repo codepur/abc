@@ -35,21 +35,21 @@ const BULLETS = [
 export default function AboutEvent() {
   return (
     <section className="bg-[#f7f9fe] py-24 px-6 md:px-12 border-y border-[rgba(5,61,202,0.05)]">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-16 lg:gap-24 items-center">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-16 lg:gap-24 items-center">
         {/* Left Side */}
         <div>
           <SectionHeader
             eyebrow="ABOUT THE EVENT"
-            title={<>The ABC Summit 2026 —<br /><em className="not-italic text-[#053DCA]">More Than a Conference</em></>}
+            title={<>The ABC Summit 2026 —<br /><em className=" text-[#053DCA]">More Than a Conference</em></>}
           />
-          <p className="text-[15.5px] text-[#444343] leading-relaxed mb-10 italic">
+          <p className="text-[15.5px] text-[#444343] leading-relaxed mb-10 ">
             The ABC Summit 2026 will bring together Agrawal entrepreneurs, business leaders, and decision-makers for a focused, high-value business event unlike anything in Central India.
           </p>
           <ul className="space-y-4">
             {BULLETS.map((bullet, i) => (
               <li key={i} className="flex items-start gap-4">
                 <span className="text-[#E88F04] text-[12px] mt-1 shrink-0">▶</span>
-                <span className="text-[14.5px] text-[#444343] leading-snug italic font-medium bg-white/60 px-2 py-1 rounded border border-[rgba(5,61,202,0.06)] shadow-sm">{bullet}</span>
+                <span className="text-[14.5px] text-[#444343] leading-snug  font-medium bg-white/60 px-2 py-1 rounded border border-[rgba(5,61,202,0.06)] shadow-sm">{bullet}</span>
               </li>
             ))}
           </ul>
@@ -65,7 +65,7 @@ export default function AboutEvent() {
               <h4 className="font-sans text-[12px] tracking-[0.15em] uppercase font-bold text-[#053DCA] mb-3">
                 {card.title}
               </h4>
-              <p className="text-[13px] text-gray-500 italic leading-relaxed">
+              <p className="text-[13px] text-gray-500  leading-relaxed">
                 {card.desc}
               </p>
             </div>

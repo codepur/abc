@@ -23,7 +23,6 @@ export default function Home() {
         <Hero />
         <Ticker />
         <StatsBar />
-        <PatternDivider />
         <AboutABC />
         <AboutEvent />
         <Theme />

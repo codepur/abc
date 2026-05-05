@@ -57,10 +57,10 @@ const PILLARS = [
 export default function Theme() {
   return (
     <section className="bg-white py-24 px-6 md:px-12" id="theme">
-      <div className="max-w-[1100px] mx-auto">
+      <div className="w-full">
         <SectionHeader
           eyebrow="Summit Theme 2026"
-          title={<>The New Shift —<br /><em className="not-italic text-[#053DCA]">Three Pillars of Modern Business</em></>}
+          title={<>The New Shift —<br /><em className=" text-[#053DCA]">Three Pillars of Modern Business</em></>}
           description="A balanced framework for building businesses that grow with purpose, lead with strategy, and endure with integrity."
         />
 
@@ -78,17 +78,17 @@ export default function Theme() {
               >
                 {p.name}
               </p>
-              <p className="text-sm text-[#5a5a6e] italic mb-3.5">{p.subtitle}</p>
-              <p className="text-[13px] text-[#5a5a6e] italic leading-[1.75]">{p.desc}</p>
+              <p className="text-sm text-[#5a5a6e]  mb-3.5">{p.subtitle}</p>
+              <p className="text-[13px] text-[#5a5a6e]  leading-[1.75]">{p.desc}</p>
             </div>
           ))}
         </div>
 
         {/* Banner */}
         <div className="mt-9 bg-[#f0f4fd] border border-[rgba(5,61,202,0.2)] p-6 md:p-8 text-center">
-          <p className="text-[17px] text-[#0d1240] italic leading-[1.65]">
+          <p className="text-[17px] text-[#0d1240]  leading-[1.65]">
             What this means for attendees:{" "}
-            <strong className="text-[#E88F04] not-italic">
+            <strong className="text-[#E88F04] ">
               A balanced approach to business where growth, strategy, and ethics come together to create
               sustainable, generational success.
             </strong>

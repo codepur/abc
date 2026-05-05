@@ -39,7 +39,7 @@ export default function SectionHeader({
       {description && (
         <p
           className={cn(
-            "text-base leading-[1.85] italic max-w-[620px]",
+            "text-base leading-[1.85]  max-w-[620px]",
             light ? "text-white/60" : "text-[#5a5a6e]",
             center && "mx-auto"
           )}

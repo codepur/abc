@@ -36,10 +36,10 @@ const FAQS = [
 export default function FAQ() {
   return (
     <section className="bg-white py-24 px-6 md:px-12" id="faq">
-      <div className="max-w-[1100px] mx-auto">
+      <div className="w-full">
         <SectionHeader
           eyebrow="Common Questions"
-          title={<>Frequently Asked<br /><em className="not-italic text-[#053DCA]">Questions</em></>}
+          title={<>Frequently Asked<br /><em className=" text-[#053DCA]">Questions</em></>}
         />
 
         <Accordion type="single" collapsible className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-12">

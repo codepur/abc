@@ -36,7 +36,7 @@ export default function StatsBar() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="relative z-10 max-w-[1100px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-10"
+        className="relative z-10 w-full grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-10"
       >
         {STATS.map(({ num, suffix, label }, i) => (
           <motion.div

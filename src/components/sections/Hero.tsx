@@ -55,7 +55,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-16 items-center">
+      <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-16 items-center">
         {/* Left */}
         <div>
           <Badge variant="blue" className="mb-6">
@@ -65,11 +65,11 @@ export default function Hero() {
 
           <h1 className="text-[clamp(34px,4.2vw,62px)] font-bold leading-[1.07] tracking-tight text-[#0d1240] mb-5">
             Where Serious<br />
-            <em className="not-italic text-[#E88F04]">Business Meets</em>
+            <em className=" text-[#E88F04]">Business Meets</em>
             <br />Serious People.
           </h1>
 
-          <p className="text-base text-[#5a5a6e] leading-[1.85] mb-8 max-w-[500px] italic">
+          <p className="text-base text-[#5a5a6e] leading-[1.85] mb-8 max-w-[500px] ">
             Not for everyone. Only for those building something that lasts. The ABC Summit 2026
             is the most focused gathering of Agrawal entrepreneurs, investors, and leaders in Central India.
           </p>

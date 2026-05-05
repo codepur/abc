@@ -13,7 +13,7 @@ export default function FinalCTA() {
         }}
       />
 
-      <div className="relative max-w-[700px] mx-auto">
+      <div className="relative w-full">
         <p className="font-sans text-[10px] tracking-[0.25em] uppercase text-white/50 mb-4 flex items-center justify-center gap-3">
           <span className="inline-block w-8 h-0.5 bg-white/30" />
           One Day. One Room. Real Outcomes.
@@ -23,7 +23,7 @@ export default function FinalCTA() {
           Join the Most Powerful<br />Business Network of the Year.
         </h2>
 
-        <p className="text-[17px] text-white/75 italic mb-10 max-w-[520px] mx-auto leading-relaxed">
+        <p className="text-[17px] text-white/75  mb-10 w-full leading-relaxed">
           Seats are limited. Entry is curated. The room is extraordinary.<br />
           The only question is — will you be in it?
         </p>
